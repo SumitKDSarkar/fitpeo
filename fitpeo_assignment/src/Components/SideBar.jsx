@@ -1,4 +1,6 @@
 import React from "react";
+import ProductTable from "./ProductTable";
+import ChartTable from "./ChartTable";
 
 const SideBar = () => {
   return (
@@ -268,7 +270,7 @@ const SideBar = () => {
       <div class="p-4 sm:ml-64">
         <div class="p-4  rounded-lg  flex justify-between items-center">
           <div>
-            <h2>Hello Shahrukh👋,</h2>
+            <h2 class="font-bold">Hello Shahrukh👋,</h2>
           </div>
           <div class="ml-4">
             <form>
@@ -311,11 +313,23 @@ const SideBar = () => {
 
       {/* Search Div End */}
 
-
-
-      <div class="p-4 sm:ml-64">
-        <div class="p-4 rounded-lg border border-black flex justify-between items-center"></div>
+   {/* Chart Table Start */}
+   <div class="p-4 sm:ml-64">
+        <div class=" items-center border border-black">
+         <ChartTable/>
+        </div>
       </div>
+      {/* Chart Table End */}
+      
+
+
+      {/* Product Table Start */}
+      <div class="p-4 sm:ml-64">
+        <div class=" items-center">
+         <ProductTable/>
+        </div>
+      </div>
+      {/* Product Table End */}
     </div>
   );
 };
