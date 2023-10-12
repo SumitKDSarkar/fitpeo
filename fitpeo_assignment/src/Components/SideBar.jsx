@@ -1,12 +1,12 @@
 import React from "react";
 import ProductTable from "./ProductTable";
 import ChartTable from "./ChartTable";
+import FirstContainer from "./FirstContainer";
 
 const SideBar = () => {
   return (
     <div>
       {/* Side Bar Start */}
-
       <button
         data-drawer-target="logo-sidebar"
         data-drawer-toggle="logo-sidebar"
@@ -85,9 +85,21 @@ const SideBar = () => {
                 href="#"
                 class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-[rgb(192,192,240)] dark:hover-bg-gray-700 group"
               >
-               <svg class="w-[19px] h-[19px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 19v-9m3-4H5.5a2.5 2.5 0 1 1 0-5C7 1 8.375 2.25 9.375 3.5M12 19v-9m-9 0h14v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8ZM2 6h16a1 1 0 0 1 1 1v3H1V7a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"/>
-  </svg>
+                <svg
+                  class="w-[19px] h-[19px] text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 19v-9m3-4H5.5a2.5 2.5 0 1 1 0-5C7 1 8.375 2.25 9.375 3.5M12 19v-9m-9 0h14v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-8ZM2 6h16a1 1 0 0 1 1 1v3H1V7a1 1 0 0 1 1-1Zm12.155-5c-3 0-5.5 5-5.5 5h5.5a2.5 2.5 0 0 0 0-5Z"
+                  />
+                </svg>
                 <span class="ml-3">Product</span>
                 <svg
                   class="w-20 h-2 text-white dark:text-black ml-auto"
@@ -313,20 +325,26 @@ const SideBar = () => {
 
       {/* Search Div End */}
 
-   {/* Chart Table Start */}
-   <div class="p-4 sm:ml-64">
+      {/* FirstContainer Start */}
+      <div class="p-4 sm:ml-64">
+        <div class=" items-center ">
+          <FirstContainer />
+        </div>
+      </div>
+      {/* FirstContainer End */}
+
+      {/* Chart Table Start */}
+      <div class="p-4 sm:ml-64">
         <div class=" items-center border border-black">
-         <ChartTable/>
+          <ChartTable />
         </div>
       </div>
       {/* Chart Table End */}
-      
-
 
       {/* Product Table Start */}
       <div class="p-4 sm:ml-64">
         <div class=" items-center">
-         <ProductTable/>
+          <ProductTable />
         </div>
       </div>
       {/* Product Table End */}
