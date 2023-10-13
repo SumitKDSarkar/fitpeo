@@ -335,7 +335,7 @@ const SideBar = () => {
 
       {/* Chart Table Start */}
       <div class="p-4 sm:ml-64">
-        <div class=" items-center border border-black">
+        <div class=" items-center  h-auto">
           <ChartTable />
         </div>
       </div>
