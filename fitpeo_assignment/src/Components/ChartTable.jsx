@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import style from "./Styles/ChartTable.module.css";
+import PieChart from "./PieChart";
 
 function ChartTable() {
+
+
+  
+
+
   const maxExpense = 200;
   const barWidth = 50;
   const barMargin = 30;
@@ -115,8 +121,22 @@ function ChartTable() {
           })}
         </svg>
       </div>
+{/* Pie Chart Start */}
+<div className={style.container2}>
+  <div >
+  <h1 className="text-lg font-bold pl-3">Customers</h1>
+  <h1 className="text-sm  pl-3" style={{ color: 'rgb(237, 237, 237)' }}>Customers that buy products</h1>
+  </div>
 
-      <div className={style.container2}></div>
+  <div className={style.pieChart}>
+
+    <PieChart/>
+  </div>
+    
+    
+    
+  </div>
+
     </div>
   );
 }

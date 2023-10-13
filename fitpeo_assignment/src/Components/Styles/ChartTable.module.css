@@ -14,9 +14,9 @@
 }
 .container2 {
   width: 28%;
-  height: auto;
+  height: 300;
   border-radius: 10px;
-
+/* border: 1px solid red; */
   background-color: white;
 }
 
@@ -27,4 +27,16 @@
   padding: 8px 16px;
   font-size: 13px;
   width: 110px;
+}
+.container2 div:nth-child(1){
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    text-align: start;
+
+}
+.container2 div:nth-child(2){
+    /* border: 1px solid blue; */
+    height: 85%;
+    width: 100%;
 }
