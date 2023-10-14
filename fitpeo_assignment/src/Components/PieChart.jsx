@@ -3,7 +3,7 @@ import styles from "./Styles/PieChart.module.css";
 
 const DonutChart = (props) => {
   const cx = 50;
-  const cy = 50;
+  const cy = 40;
   const strokeWidth = 15;
   const radius = 20;
   const dashArray = 2 * Math.PI * radius;
@@ -32,16 +32,19 @@ const DonutChart = (props) => {
 
   return (
     <div className={styles["donut-chart"]}>
-      <svg width="300px" height="300px" viewBox="0 0 100 100">
+      <svg  width="300px" height="250px" viewBox="0 0 100 100">
         {props.data.map((item, index) => (
           <circle
+      
             key={index}
             cx={cx}
             cy={cy}
             r={radius}
+            
             fill="transparent"
             strokeWidth={strokeWidth}
             stroke={item.color}
+            
             strokeDasharray={dashArray}
             strokeDashoffset={item.offset}
             transform={`rotate(${item.angle} ${cx} ${cy})`}
@@ -82,11 +85,16 @@ const donut = [
   {
     name: "Porta",
     color: "#f33396",
-    value: 70,
+    value: 30,
   },
   {
     name: "Curabitur",
     color: "#5d36ea",
+    value: 65,
+  },
+  {
+    name: "Curabitur",
+    color: "#f1effc",
     value: 65,
   },
 ];

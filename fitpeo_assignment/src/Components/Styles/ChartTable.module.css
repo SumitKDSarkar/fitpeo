@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 100%;
+  height: auto;
   gap: 2%;
   display: flex;
 }
@@ -9,14 +9,13 @@
   width: 70%;
   border-radius: 10px;
   height: auto;
-
   background-color: white;
 }
+
 .container2 {
   width: 28%;
-  height: 300;
+  height: 300px;
   border-radius: 10px;
-/* border: 1px solid red; */
   background-color: white;
 }
 
@@ -28,15 +27,24 @@
   font-size: 13px;
   width: 110px;
 }
-.container2 div:nth-child(1){
-    width: 100%;
-    height: auto;
-    /* border: 1px solid red; */
-    text-align: start;
-
+.container2 div:nth-child(1) {
+  width: 100%;
+  height: auto;
+  text-align: start;
 }
-.container2 div:nth-child(2){
-    /* border: 1px solid blue; */
-    height: 85%;
+.container2 div:nth-child(2) {
+  height: 85%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container1,
+  .container2 {
     width: 100%;
+    margin-bottom: 10px;
+  }
 }

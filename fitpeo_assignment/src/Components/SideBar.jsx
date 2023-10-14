@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductTable from "./ProductTable";
 import ChartTable from "./ChartTable";
 import FirstContainer from "./FirstContainer";
 
 const SideBar = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
   return (
     <div>
       {/* Side Bar Start */}
@@ -13,6 +18,8 @@ const SideBar = () => {
         aria-controls="logo-sidebar"
         type="button"
         class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        onClick={toggleSidebar}
+        style={{ verticalAlign: "left", display: "flex" }}
       >
         <span class="sr-only">Open sidebar</span>
         <svg
@@ -32,11 +39,39 @@ const SideBar = () => {
 
       <aside
         id="logo-sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0  dark:bg-gray-800"
+        // class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0  dark:bg-gray-800"
+        className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } sm:translate-x-0 dark:bg-gray-800`}
         aria-label="Sidebar"
       >
+        {isSidebarOpen && (
+          <button
+            data-drawer-target="logo-sidebar"
+            data-drawer-toggle="logo-sidebar"
+            type="button"
+            className="absolute top-4 right-4 text-gray-500 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:ring-gray-600"
+            onClick={toggleSidebar}
+          >
+            <span className="sr-only">Close sidebar</span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        )}
+
         <div class="h-full px-3 py-4 overflow-y-auto bg-[rgb(4,4,64)] dark:bg-gray-800">
-          <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
+          <a href="#" class="flex items-center pl-2.5 mb-5">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
               class="h-6 mr-3 sm:h-7"
@@ -279,7 +314,7 @@ const SideBar = () => {
 
       {/* Search Div Start */}
 
-      <div class="p-4 sm:ml-64">
+      <div class="p-4 mt-[-2rem]  sm:ml-64 ">
         <div class="p-4  rounded-lg  flex justify-between items-center">
           <div>
             <h2 class="font-bold">Hello Shahrukh👋,</h2>

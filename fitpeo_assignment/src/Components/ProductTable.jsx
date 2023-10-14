@@ -108,7 +108,7 @@ const ProductTable = () => {
                         <img class="w-15 h-10 " src="https://t3.ftcdn.net/jpg/02/60/33/54/360_F_260335426_HDv85LLqhTWofR8sFC7ZKVYtplNJrfBy.jpg" alt="Jese image"/>
                         <div class="pl-3">
                             <div class="text-base font-semibold">Sarphens illustration</div>
-                            <div class="font-normal text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                            <div class="font-normal text-gray-500">Lorem ipsum dolor sit amet  consectetur adipisicing elit</div>
                         </div>
                     </th>
                     <td class="px-6 py-4">
