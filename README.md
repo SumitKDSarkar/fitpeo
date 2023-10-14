@@ -16,7 +16,7 @@ Have a look ⬇️
 
 **Client:** HTML, CSS, JavaScript, React.JS, TailWind.css
 
-**Deploying:** [Vercel]()
+**Deploying:** [Vercel](https://fitpeo-five.vercel.app/)
 
 
 
